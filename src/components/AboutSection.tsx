@@ -68,7 +68,7 @@ const AboutSection = () => {
                   className="flex items-start gap-4 p-6 rounded-2xl bg-card/80 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300 group hover-lift glass-card"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
+                  <div className={`p-3 rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300 water-float ${index % 4 === 1 ? 'water-float-delay-1' : index % 4 === 2 ? 'water-float-delay-2' : index % 4 === 3 ? 'water-float-delay-3' : ''}`}>
                     <item.icon size={24} />
                   </div>
                   <div>

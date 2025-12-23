@@ -10,13 +10,13 @@ const HeroSection = () => {
       <div className="absolute bottom-40 left-32 w-24 h-24 border border-accent/30 animate-rotate-3d"
            style={{ animationDelay: "5s", animationDuration: "15s" }} />
       
-      {/* Halogen glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-4 h-4 rounded-full bg-accent animate-glow" 
-           style={{ boxShadow: "0 0 60px 20px hsla(12, 76%, 61%, 0.4)" }} />
-      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-blue-400 animate-glow"
-           style={{ animationDelay: "1s", boxShadow: "0 0 50px 15px hsla(200, 80%, 60%, 0.4)" }} />
-      <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-purple-400 animate-glow"
-           style={{ animationDelay: "2s", boxShadow: "0 0 40px 12px hsla(280, 70%, 60%, 0.4)" }} />
+      {/* Halogen glow orbs - floating */}
+      <div className="absolute top-1/4 right-1/4 w-4 h-4 rounded-full bg-primary animate-glow water-float" 
+           style={{ boxShadow: "0 0 60px 20px hsla(352, 32%, 61%, 0.4)" }} />
+      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-accent animate-glow water-float water-float-delay-1"
+           style={{ animationDelay: "1s", boxShadow: "0 0 50px 15px hsla(290, 80%, 79%, 0.4)" }} />
+      <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-primary animate-glow water-float water-float-delay-2"
+           style={{ animationDelay: "2s", boxShadow: "0 0 40px 12px hsla(352, 32%, 61%, 0.4)" }} />
       
       <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -67,7 +67,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Social Links */}
+          {/* Social Links - Icons float */}
           <div 
             className="flex items-center justify-center gap-4 animate-fade-up"
             style={{ animationDelay: "0.6s" }}
@@ -76,7 +76,7 @@ const HeroSection = () => {
               href="https://github.com/ratanjulme"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float"
             >
               <Github size={20} className="group-hover:scale-110 transition-transform" />
             </a>
@@ -84,19 +84,19 @@ const HeroSection = () => {
               href="https://linkedin.com/in/ratanjulme"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float water-float-delay-1"
             >
               <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="mailto:ratanjulme20@gmail.com"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float water-float-delay-2"
             >
               <Mail size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
               href="tel:+919014434351"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float water-float-delay-3"
             >
               <Phone size={20} className="group-hover:scale-110 transition-transform" />
             </a>
