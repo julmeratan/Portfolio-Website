@@ -1,89 +1,67 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github, Folder, BarChart3, Rocket } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description: "A modern admin dashboard for e-commerce platforms with real-time analytics, order management, and inventory tracking.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Chart.js"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "Walmart E-Commerce Sales Report",
+    description: "Developed a Power BI dashboard analyzing $12.64M in sales and $1.47M in profit. Boosted data visibility by 65% while optimizing shipping trends across markets and regions.",
+    tags: ["Power BI", "DAX", "Data Modeling", "KPIs"],
+    company: "Tech-Tip24",
     featured: true,
+    icon: BarChart3,
   },
   {
-    title: "Task Management App",
-    description: "Collaborative task management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Socket.io"],
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "ISRO Space Missions Dashboard",
+    description: "Engineered a Power BI dashboard improving analytical efficiency by 65%. Leveraged DAX, performance metrics, and predictive analytics for comprehensive mission analysis.",
+    tags: ["Power BI", "Predictive Analytics", "Data Visualization"],
     featured: true,
+    icon: Rocket,
   },
   {
-    title: "Weather Application",
-    description: "Beautiful weather app with location-based forecasts, interactive maps, and customizable notifications.",
-    tags: ["React", "OpenWeather API", "Geolocation"],
-    github: "https://github.com",
+    title: "Hyperledger Blockchain Development",
+    description: "Worked on blockchain technology and smart contracts during internship at IDS Pvt. Ltd, gaining hands-on experience in distributed ledger systems.",
+    tags: ["Hyperledger", "Smart Contracts", "Blockchain"],
     featured: false,
   },
   {
-    title: "Portfolio Generator",
-    description: "Tool to create stunning portfolio websites from markdown files with customizable themes.",
-    tags: ["Next.js", "MDX", "Tailwind CSS"],
-    github: "https://github.com",
+    title: "AWS Cloud Projects",
+    description: "Completed cloud services training focusing on deployment and management as part of 10-week AICTE internship.",
+    tags: ["AWS", "Cloud Computing", "Deployment"],
     featured: false,
   },
   {
-    title: "Recipe Finder",
-    description: "Search and discover recipes based on ingredients you have, with filtering and favorites functionality.",
-    tags: ["React", "Spoonacular API", "LocalStorage"],
-    github: "https://github.com",
+    title: "Data Analytics Pipeline",
+    description: "Built comprehensive data analysis workflows using Python and SQL for processing and visualizing large datasets.",
+    tags: ["Python", "SQL", "Data Analysis"],
     featured: false,
   },
   {
-    title: "Markdown Editor",
-    description: "Real-time markdown editor with preview, syntax highlighting, and export options.",
-    tags: ["React", "CodeMirror", "HTML-to-PDF"],
-    github: "https://github.com",
+    title: "MongoDB Integration Project",
+    description: "Implemented database solutions using MongoDB for efficient data storage and retrieval in analytics applications.",
+    tags: ["MongoDB", "Database Design", "NoSQL"],
     featured: false,
   },
 ];
 
 const ProjectCard = ({ project, featured }: { project: typeof projects[0]; featured: boolean }) => (
   <div
-    className={`group rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 ${
+    className={`group rounded-3xl overflow-hidden transition-all duration-300 hover-lift ${
       featured 
-        ? "bg-card shadow-medium hover:shadow-lg" 
-        : "bg-background border border-border hover:border-accent/50"
+        ? "bg-card/80 backdrop-blur-sm shadow-medium hover:shadow-lg glass-card" 
+        : "bg-background/80 backdrop-blur-sm border border-border hover:border-accent/50"
     }`}
   >
     <div className={`p-6 ${featured ? "md:p-8" : ""}`}>
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
-        <div className={`p-3 rounded-xl ${featured ? "bg-accent/10 text-accent" : "bg-secondary text-muted-foreground"}`}>
-          <Folder size={featured ? 28 : 24} />
+        <div className={`p-3 rounded-xl ${featured ? "bg-accent/10 text-accent" : "bg-secondary text-muted-foreground"} group-hover:animate-glow`}>
+          {project.icon ? <project.icon size={featured ? 28 : 24} /> : <Folder size={featured ? 28 : 24} />}
         </div>
-        <div className="flex items-center gap-2">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Github size={18} />
-            </a>
-          )}
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-muted-foreground hover:text-accent transition-colors"
-            >
-              <ExternalLink size={18} />
-            </a>
-          )}
-        </div>
+        {project.company && (
+          <span className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-body">
+            {project.company}
+          </span>
+        )}
       </div>
 
       {/* Content */}
@@ -99,7 +77,7 @@ const ProjectCard = ({ project, featured }: { project: typeof projects[0]; featu
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 text-xs font-body rounded-full bg-secondary text-muted-foreground"
+            className="px-3 py-1 text-xs font-body rounded-full bg-secondary text-muted-foreground holographic"
           >
             {tag}
           </span>
@@ -114,7 +92,7 @@ const ProjectsSection = () => {
   const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-24 bg-background/80 backdrop-blur-sm relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -123,7 +101,7 @@ const ProjectsSection = () => {
               My Work
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-              Featured <span className="text-gradient">Projects</span>
+              Featured <span className="text-gradient glow-text">Projects</span>
             </h2>
           </div>
 
@@ -148,9 +126,9 @@ const ProjectsSection = () => {
 
           {/* View More CTA */}
           <div className="text-center">
-            <Button variant="outline" size="lg" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                View More on GitHub
+            <Button variant="outline" size="lg" asChild className="hover-lift">
+              <a href="https://linkedin.com/in/ratanjulme" target="_blank" rel="noopener noreferrer">
+                Connect on LinkedIn
                 <ExternalLink size={16} />
               </a>
             </Button>

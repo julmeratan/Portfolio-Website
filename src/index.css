@@ -166,6 +166,31 @@
     animation: slideIn 0.5s ease-out forwards;
   }
 
+  .ripple-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid hsl(12, 76%, 61%);
+    animation: ripple 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes ripple {
+    0% {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -195,6 +220,44 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  .glass-card {
+    background: hsla(var(--card), 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(var(--border), 0.3);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsla(12, 76%, 61%, 0.25);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 40px hsla(12, 76%, 61%, 0.5);
+  }
+
+  .holographic {
+    background: linear-gradient(
+      135deg,
+      hsla(12, 76%, 61%, 0.1) 0%,
+      hsla(200, 80%, 60%, 0.1) 25%,
+      hsla(280, 70%, 60%, 0.1) 50%,
+      hsla(12, 76%, 61%, 0.1) 75%,
+      hsla(200, 80%, 60%, 0.1) 100%
+    );
+    background-size: 400% 400%;
+    animation: holographicShift 8s ease infinite;
+  }
+
+  @keyframes holographicShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }
 
