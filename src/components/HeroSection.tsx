@@ -1,30 +1,40 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen gradient-hero flex items-center justify-center relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-pulse-soft" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: "1s" }} />
+      {/* 3D Rotating geometric shapes */}
+      <div className="absolute top-20 right-20 w-32 h-32 border border-accent/20 rotate-45 animate-rotate-3d" 
+           style={{ transformStyle: "preserve-3d" }} />
+      <div className="absolute bottom-40 left-32 w-24 h-24 border border-accent/30 animate-rotate-3d"
+           style={{ animationDelay: "5s", animationDuration: "15s" }} />
       
-      <div className="container mx-auto px-6 pt-24 pb-12">
+      {/* Halogen glow orbs */}
+      <div className="absolute top-1/4 right-1/4 w-4 h-4 rounded-full bg-accent animate-glow" 
+           style={{ boxShadow: "0 0 60px 20px hsla(12, 76%, 61%, 0.4)" }} />
+      <div className="absolute bottom-1/3 left-1/4 w-3 h-3 rounded-full bg-blue-400 animate-glow"
+           style={{ animationDelay: "1s", boxShadow: "0 0 50px 15px hsla(200, 80%, 60%, 0.4)" }} />
+      <div className="absolute top-1/2 right-1/3 w-2 h-2 rounded-full bg-purple-400 animate-glow"
+           style={{ animationDelay: "2s", boxShadow: "0 0 40px 12px hsla(280, 70%, 60%, 0.4)" }} />
+      
+      <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Status Badge */}
+          {/* Status Badge with shimmer */}
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-body text-sm mb-8 animate-fade-up"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-body text-sm mb-8 animate-fade-up holographic"
             style={{ animationDelay: "0.1s" }}
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             Open to opportunities
           </div>
 
-          {/* Main Heading */}
+          {/* Main Heading with glow */}
           <h1 
             className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 animate-fade-up leading-tight"
             style={{ animationDelay: "0.2s" }}
           >
-            Hi, I'm <span className="text-gradient">John Doe</span>
+            Hi, I'm <span className="text-gradient glow-text">Julme Ratan</span>
           </h1>
 
           {/* Subtitle */}
@@ -32,7 +42,7 @@ const HeroSection = () => {
             className="font-display text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 animate-fade-up"
             style={{ animationDelay: "0.3s" }}
           >
-            Frontend Developer & UI Designer
+            Data Analyst & AI/ML Developer
           </p>
 
           {/* Description */}
@@ -40,8 +50,8 @@ const HeroSection = () => {
             className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up leading-relaxed"
             style={{ animationDelay: "0.4s" }}
           >
-            Fresh graduate passionate about crafting beautiful, user-centric web experiences. 
-            Turning ideas into elegant, functional interfaces.
+            B.Tech AI & ML student passionate about data analytics, visualization, and cloud technologies. 
+            Transforming raw data into actionable insights with Power BI, Python, and SQL.
           </p>
 
           {/* CTA Buttons */}
@@ -49,10 +59,10 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-up"
             style={{ animationDelay: "0.5s" }}
           >
-            <Button variant="hero" size="lg" asChild>
+            <Button variant="hero" size="lg" asChild className="hover-lift">
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button variant="hero-outline" size="lg" asChild>
+            <Button variant="hero-outline" size="lg" asChild className="hover-lift">
               <a href="#projects">View Projects</a>
             </Button>
           </div>
@@ -63,26 +73,32 @@ const HeroSection = () => {
             style={{ animationDelay: "0.6s" }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/ratanjulme"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
             >
               <Github size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/ratanjulme"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
             >
               <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="mailto:john@example.com"
-              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group"
+              href="mailto:ratanjulme20@gmail.com"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
             >
               <Mail size={20} className="group-hover:scale-110 transition-transform" />
+            </a>
+            <a
+              href="tel:+919014434351"
+              className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift"
+            >
+              <Phone size={20} className="group-hover:scale-110 transition-transform" />
             </a>
           </div>
         </div>

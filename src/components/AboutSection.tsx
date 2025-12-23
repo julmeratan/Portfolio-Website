@@ -1,26 +1,31 @@
-import { Code2, Palette, Sparkles } from "lucide-react";
+import { BarChart3, Cloud, Database, Sparkles } from "lucide-react";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable code following best practices",
+    icon: BarChart3,
+    title: "Data Analytics",
+    description: "Proficient in Excel, SQL, Power BI, and Python for data analysis and reporting",
   },
   {
-    icon: Palette,
-    title: "UI/UX Focus",
-    description: "Creating intuitive interfaces with attention to detail",
+    icon: Database,
+    title: "Database & Blockchain",
+    description: "Experienced with SQL databases, MongoDB, and Hyperledger blockchain development",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Technologies",
+    description: "AWS certified with hands-on experience in cloud services and deployment",
   },
   {
     icon: Sparkles,
-    title: "Fast Learner",
-    description: "Quickly adapting to new technologies and frameworks",
+    title: "AI & Machine Learning",
+    description: "B.Tech specialization in AI/ML with practical project experience",
   },
 ];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-24 bg-background/80 backdrop-blur-sm relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -29,8 +34,8 @@ const AboutSection = () => {
               About Me
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-              Passionate about creating<br />
-              <span className="text-gradient">meaningful experiences</span>
+              Turning data into<br />
+              <span className="text-gradient glow-text">actionable insights</span>
             </h2>
           </div>
 
@@ -39,18 +44,19 @@ const AboutSection = () => {
             {/* Text Content */}
             <div className="space-y-6">
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                I'm a recent Computer Science graduate with a deep passion for frontend development 
-                and user interface design. My journey in web development started during my first year 
-                of college, and I've been hooked ever since.
+                I'm Julme Ratan, a B.Tech student specializing in Artificial Intelligence and 
+                Machine Learning at GRIET, Hyderabad. My passion lies in transforming raw data 
+                into meaningful business insights through analytics and visualization.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                I believe in the power of well-crafted digital experiences to make a difference. 
-                Whether it's a simple landing page or a complex web application, I approach every 
-                project with the same level of enthusiasm and attention to detail.
+                With hands-on experience in Power BI, Python, and SQL, I've developed dashboards 
+                that improved data visibility by 65%. My internship at IDS Pvt. Ltd as a Hyperledger 
+                Developer gave me unique insights into blockchain technology.
               </p>
               <p className="font-body text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new design trends, contributing to 
-                open-source projects, or experimenting with the latest web technologies.
+                I'm also AWS certified and have completed training in cloud services, deployment, 
+                and management through AICTE. I love organizing tech events and have led hackathons 
+                with participants from multiple colleges.
               </p>
             </div>
 
@@ -59,7 +65,7 @@ const AboutSection = () => {
               {highlights.map((item, index) => (
                 <div
                   key={item.title}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-card shadow-soft hover:shadow-medium transition-all duration-300 group"
+                  className="flex items-start gap-4 p-6 rounded-2xl bg-card/80 backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-300 group hover-lift glass-card"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="p-3 rounded-xl bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
