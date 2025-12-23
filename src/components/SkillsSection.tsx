@@ -18,15 +18,13 @@ const skills = {
 };
 
 const SkillBar = ({ name, level, index = 0 }: { name: string; level: number; index?: number }) => {
-  const delayClass = index % 4 === 1 ? 'water-float-delay-1' : index % 4 === 2 ? 'water-float-delay-2' : index % 4 === 3 ? 'water-float-delay-3' : '';
-  
   return (
     <div className="group">
       <div className="flex justify-between items-center mb-2">
-        <span className={`font-body text-sm text-foreground font-medium water-float ${delayClass}`}>{name}</span>
-        <span className="font-body text-xs text-muted-foreground">{level}%</span>
+        <span className="font-body text-sm text-foreground font-medium">{name}</span>
+        <span className="font-body text-xs text-muted-foreground font-semibold">{level}%</span>
       </div>
-      <div className="h-2 bg-secondary rounded-full overflow-hidden water-bubble">
+      <div className="h-2 bg-secondary rounded-full overflow-hidden">
         <div
           className="h-full gradient-accent rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
           style={{ width: `${level}%` }}
@@ -91,7 +89,7 @@ const SkillsSection = () => {
               {["Trading & Investing", "Team Leadership", "Sales & Marketing", "Communication", "Event Management", "Smart Contracts", "KPIs", "Predictive Analytics"].map((skill, index) => (
                 <span
                   key={skill}
-                  className={`px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border text-sm font-body text-muted-foreground hover:border-accent hover:text-accent transition-colors holographic water-float water-bubble ${index % 4 === 1 ? 'water-float-delay-1' : index % 4 === 2 ? 'water-float-delay-2' : index % 4 === 3 ? 'water-float-delay-3' : ''}`}
+                  className="px-4 py-2 rounded-full bg-background/80 backdrop-blur-sm border border-border text-sm font-body text-foreground font-medium hover:border-accent hover:text-accent transition-colors holographic"
                 >
                   {skill}
                 </span>

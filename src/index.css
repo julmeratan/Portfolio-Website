@@ -8,34 +8,34 @@
   :root {
     /* New crystal palette: #C4737C, #E1D3CA, #F3EEE9, #DFA0F3 */
     --background: 35 30% 94%; /* #F3EEE9 */
-    --foreground: 352 32% 35%;
+    --foreground: 0 0% 10%; /* High contrast dark text */
 
     --card: 25 25% 90%; /* #E1D3CA */
-    --card-foreground: 352 32% 30%;
+    --card-foreground: 0 0% 10%; /* High contrast dark text */
 
     --popover: 25 25% 90%;
-    --popover-foreground: 352 32% 30%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 352 32% 61%; /* #C4737C */
-    --primary-foreground: 35 30% 98%;
+    --primary: 352 32% 45%; /* Darker rose for better contrast */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 25 25% 85%;
-    --secondary-foreground: 352 32% 35%;
+    --secondary-foreground: 0 0% 15%;
 
     --muted: 35 20% 88%;
-    --muted-foreground: 352 20% 50%;
+    --muted-foreground: 0 0% 30%; /* Darker for better readability */
 
-    --accent: 290 80% 79%; /* #DFA0F3 */
-    --accent-foreground: 290 50% 20%;
+    --accent: 290 70% 55%; /* Darker orchid for contrast */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 25 20% 80%;
     --input: 25 20% 80%;
-    --ring: 290 80% 79%;
+    --ring: 290 70% 55%;
 
-    /* Water colors */
+    /* Water colors for effects only */
     --water-rose: 352 32% 61%; /* #C4737C */
     --water-cream: 25 25% 85%; /* #E1D3CA */
     --water-ivory: 35 30% 94%; /* #F3EEE9 */
@@ -45,7 +45,7 @@
 
     --gradient-hero: linear-gradient(135deg, hsl(35 30% 94%) 0%, hsl(25 25% 90%) 50%, hsl(35 30% 94%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(25 25% 90% / 0.9) 0%, hsl(35 30% 94% / 0.8) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(352 32% 61%) 0%, hsl(290 80% 79%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(352 32% 50%) 0%, hsl(290 70% 55%) 100%);
     --gradient-water: linear-gradient(180deg, hsl(35 30% 94% / 0.95) 0%, hsl(25 25% 90% / 0.9) 50%, hsl(290 80% 79% / 0.3) 100%);
     
     --shadow-soft: 0 4px 20px -4px hsl(352 32% 61% / 0.15);
@@ -57,36 +57,36 @@
     --font-body: 'Inter', sans-serif;
 
     --sidebar-background: 35 30% 94%;
-    --sidebar-foreground: 352 32% 35%;
-    --sidebar-primary: 352 32% 61%;
-    --sidebar-primary-foreground: 35 30% 98%;
-    --sidebar-accent: 290 80% 79%;
-    --sidebar-accent-foreground: 290 50% 20%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 352 32% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 290 70% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 25 20% 80%;
-    --sidebar-ring: 290 80% 79%;
+    --sidebar-ring: 290 70% 55%;
   }
 
   .dark {
     --background: 290 20% 8%;
-    --foreground: 35 30% 92%;
+    --foreground: 0 0% 95%; /* High contrast light text */
 
     --card: 290 18% 12%;
-    --card-foreground: 35 30% 92%;
+    --card-foreground: 0 0% 95%;
 
     --popover: 290 18% 12%;
-    --popover-foreground: 35 30% 92%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 352 32% 65%;
-    --primary-foreground: 290 20% 8%;
+    --primary: 352 40% 70%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 290 15% 16%;
-    --secondary-foreground: 35 25% 88%;
+    --secondary-foreground: 0 0% 90%;
 
     --muted: 290 12% 18%;
-    --muted-foreground: 35 15% 55%;
+    --muted-foreground: 0 0% 70%; /* Lighter for dark mode readability */
 
     --accent: 290 80% 75%;
-    --accent-foreground: 290 20% 10%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -105,11 +105,11 @@
     --gradient-water: linear-gradient(180deg, hsl(290 20% 8% / 0.95) 0%, hsl(290 18% 12% / 0.9) 50%, hsl(352 32% 65% / 0.2) 100%);
 
     --sidebar-background: 290 20% 8%;
-    --sidebar-foreground: 35 30% 92%;
-    --sidebar-primary: 352 32% 65%;
-    --sidebar-primary-foreground: 290 20% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 352 40% 70%;
+    --sidebar-primary-foreground: 0 0% 10%;
     --sidebar-accent: 290 80% 75%;
-    --sidebar-accent-foreground: 290 20% 10%;
+    --sidebar-accent-foreground: 0 0% 10%;
     --sidebar-border: 290 15% 18%;
     --sidebar-ring: 290 80% 75%;
   }
