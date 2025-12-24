@@ -58,6 +58,28 @@
     --sidebar-ring: 180 100% 50%;
   }
 
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 180 100% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 20%;
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 10% 40%;
+    --accent: 320 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 85%;
+    --input: 240 5% 85%;
+    --ring: 180 100% 35%;
+  }
+
   .dark {
     --background: 240 10% 4%;
     --foreground: 0 0% 95%;
@@ -164,9 +186,9 @@
   }
 
   .glass-card {
-    background: hsl(240 10% 8% / 0.8);
+    background: hsl(var(--card) / 0.8);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(240 10% 20% / 0.5);
+    border: 1px solid hsl(var(--border) / 0.5);
   }
 
   .hover-lift {

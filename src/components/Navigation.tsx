@@ -12,15 +12,22 @@ const navLinks = [
 ];
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       className="p-2 rounded-full bg-card border border-border hover:border-primary transition-colors"
       aria-label="Toggle theme"
     >
-      {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+      {resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
     </button>
   );
 };
@@ -75,14 +82,11 @@ const Navigation = () => {
           ))}
         </ul>
 
-        {/* Theme Toggle */}
-        <ThemeToggle />
-
-        {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden">
+        {/* Theme Toggle & Mobile Menu Button */}
+        <div className="flex items-center gap-2">
           <ThemeToggle />
           <button
-            className="p-2 text-foreground"
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
