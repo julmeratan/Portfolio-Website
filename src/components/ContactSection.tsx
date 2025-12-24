@@ -9,8 +9,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "ratanjulme20@gmail.com",
-    href: "mailto:ratanjulme20@gmail.com",
+    value: "julmeratan@gmail.com",
+    href: "mailto:julmeratan@gmail.com",
   },
   {
     icon: Phone,
