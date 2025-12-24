@@ -22,7 +22,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/ratanjulme",
-    href: "https://linkedin.com/in/ratanjulme",
+    href: "https://www.linkedin.com/in/ratanjulme/",
   },
   {
     icon: MapPin,
