@@ -19,9 +19,20 @@ const AboutSection = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               About Me
             </h2>
-            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              I am a B.Tech student specializing in AI & ML with a passion for data science and analytics
-            </p>
+            <div className="font-body text-muted-foreground max-w-3xl mx-auto space-y-4 text-left">
+              <p>
+                I am a Computer Science undergraduate specializing in Artificial Intelligence and Data Analytics, with a strong interest in solving real-world problems through technology.
+              </p>
+              <p>
+                I have hands-on experience with Python, SQL, Power BI, Excel, HTML, CSS, C, and PowerPoint, working across data analysis, reporting, system understanding, and basic web development. I focus on building clear, structured, and practical solutions that deliver real value.
+              </p>
+              <p>
+                My internship experience in Data Analytics, AWS Cloud, and engineering-based environments has strengthened my adaptability, teamwork, and execution mindset. I bring strong communication, leadership skills, and a continuous willingness to learn.
+              </p>
+              <p>
+                I am open to opportunities across multiple roles and domains, ready to contribute effectively and grow with the organization.
+              </p>
+            </div>
           </div>
 
           {/* Skills Grid */}
