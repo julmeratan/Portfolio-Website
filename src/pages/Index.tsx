@@ -5,11 +5,13 @@ import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import InteractiveBackground from "@/components/InteractiveBackground";
+import CursorGlow from "@/components/CursorGlow";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <InteractiveBackground />
+      <CursorGlow />
       <Navigation />
       <main className="relative z-10">
         <HeroSection />
