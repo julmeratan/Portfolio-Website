@@ -33,10 +33,10 @@ const CursorGlow = () => {
         style={{
           left: position.x,
           top: position.y,
-          width: "8px",
-          height: "8px",
+          width: "20px",
+          height: "20px",
           transform: "translate(-50%, -50%)",
-          boxShadow: "0 0 10px hsl(180 100% 50% / 0.8)",
+          boxShadow: "0 0 20px hsl(180 100% 50% / 0.9), 0 0 40px hsl(180 100% 50% / 0.5)",
         }}
       />
     </div>
