@@ -23,7 +23,7 @@ const softSkills = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-16 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -48,8 +48,8 @@ const AboutSection = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="mb-10">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6 text-center">
+          <div id="skills" className="mb-10 scroll-mt-20">
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
               Skills & Expertise
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
@@ -65,8 +65,8 @@ const AboutSection = () => {
           </div>
 
           {/* Soft Skills */}
-          <div className="mb-16">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-6 text-center">
+          <div className="mb-12">
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
               Soft Skills
             </h3>
             <div className="flex flex-wrap justify-center gap-3">
@@ -83,7 +83,7 @@ const AboutSection = () => {
 
           {/* Education Timeline */}
           <div>
-            <h3 className="font-display text-xl font-semibold text-foreground mb-2 text-center">
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2 text-center">
               Education Timeline
             </h3>
             <p className="font-body text-sm text-muted-foreground text-center mb-8">
