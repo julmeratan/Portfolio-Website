@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Linkedin, Github } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -23,6 +23,12 @@ const contactInfo = [
     label: "LinkedIn",
     value: "linkedin.com/in/ratanjulme",
     href: "https://www.linkedin.com/in/ratanjulme/",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/julmeratan",
+    href: "https://github.com/julmeratan",
   },
   {
     icon: MapPin,
@@ -50,116 +56,103 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background/80 backdrop-blur-sm relative">
+    <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="font-body text-sm uppercase tracking-widest text-accent mb-4 block">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Get in Touch
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Let's work <span className="text-gradient glow-text">together</span>
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm currently looking for opportunities in Data Analytics, AI/ML, and Cloud Computing. 
-              Whether you have a question or just want to say hi, my inbox is always open!
+            <p className="font-body text-muted-foreground max-w-xl mx-auto">
+              I'm currently looking for opportunities in Data Analytics, AI/ML, and Cloud Computing.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-6">
-              <h3 className="font-display text-xl font-semibold text-foreground">
-                Contact Information
-              </h3>
-              <p className="font-body text-muted-foreground">
-                Feel free to reach out through any of these channels. 
-                I typically respond within 24 hours.
-              </p>
-              
-              <div className="space-y-4">
-                {contactInfo.map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center gap-4 p-4 rounded-2xl bg-secondary/50 hover:bg-secondary transition-colors glass-card hover-lift"
-                  >
-                    <div className="p-3 rounded-xl bg-accent/10 text-accent">
-                      <item.icon size={20} />
-                    </div>
-                    <div>
-                      <p className="font-body text-xs text-muted-foreground uppercase tracking-wide">
-                        {item.label}
-                      </p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          target={item.href.startsWith("http") ? "_blank" : undefined}
-                          rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="font-display font-medium text-foreground hover:text-accent transition-colors"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="font-display font-medium text-foreground">
-                          {item.value}
-                        </p>
-                      )}
-                    </div>
+            <div className="space-y-4">
+              {contactInfo.map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-4 p-4 rounded-xl glass-card hover-lift"
+                >
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <item.icon size={20} />
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <p className="font-body text-xs text-muted-foreground uppercase tracking-wide">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="font-body text-sm text-foreground hover:text-primary transition-colors"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="font-body text-sm text-foreground">
+                        {item.value}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-3">
-              <form onSubmit={handleSubmit} className="p-8 rounded-3xl bg-card/80 backdrop-blur-sm shadow-soft glass-card">
-                <div className="grid sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label className="font-body text-sm text-foreground mb-2 block">
-                      Your Name
-                    </label>
-                    <Input
-                      placeholder="Your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="bg-background border-border focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <label className="font-body text-sm text-foreground mb-2 block">
-                      Your Email
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      required
-                      className="bg-background border-border focus:border-accent"
-                    />
-                  </div>
+            <form onSubmit={handleSubmit} className="glass-card rounded-xl p-6">
+              <div className="space-y-4">
+                <div>
+                  <label className="font-body text-sm text-foreground mb-2 block">
+                    Your Name
+                  </label>
+                  <Input
+                    placeholder="Enter your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                    className="bg-background border-border focus:border-primary"
+                  />
                 </div>
-                <div className="mb-6">
+                <div>
+                  <label className="font-body text-sm text-foreground mb-2 block">
+                    Your Email
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="your@email.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                    className="bg-background border-border focus:border-primary"
+                  />
+                </div>
+                <div>
                   <label className="font-body text-sm text-foreground mb-2 block">
                     Your Message
                   </label>
                   <Textarea
-                    placeholder="Tell me about your opportunity or project..."
-                    rows={6}
+                    placeholder="Tell me about your opportunity..."
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
-                    className="bg-background border-border focus:border-accent resize-none"
+                    className="bg-background border-border focus:border-primary resize-none"
                   />
                 </div>
-                <Button type="submit" variant="accent" size="lg" className="w-full sm:w-auto hover-lift">
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
+                >
                   Send Message
                   <Send size={16} />
                 </Button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
