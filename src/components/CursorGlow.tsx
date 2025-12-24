@@ -25,21 +25,18 @@ const CursorGlow = () => {
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
+      className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
       style={{ opacity: isVisible ? 1 : 0 }}
     >
       <div
-        className="absolute rounded-full"
+        className="absolute rounded-full bg-primary"
         style={{
           left: position.x,
           top: position.y,
-          width: "400px",
-          height: "400px",
+          width: "8px",
+          height: "8px",
           transform: "translate(-50%, -50%)",
-          background:
-            "radial-gradient(circle, hsl(180 100% 50% / 0.15) 0%, hsl(320 100% 60% / 0.08) 40%, transparent 70%)",
-          filter: "blur(30px)",
-          transition: "left 0.1s ease-out, top 0.1s ease-out",
+          boxShadow: "0 0 10px hsl(180 100% 50% / 0.8)",
         }}
       />
     </div>
