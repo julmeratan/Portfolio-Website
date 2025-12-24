@@ -104,15 +104,15 @@ const InteractiveBackground = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 bg-background">
+    <div className="fixed top-0 left-0 w-screen h-screen overflow-hidden pointer-events-none z-0 bg-background">
       <canvas
         ref={canvasRef}
-        className="absolute inset-0"
+        className="absolute top-0 left-0 w-full h-full"
       />
       
       {/* Subtle gradient overlay */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute top-0 left-0 w-full h-full opacity-30"
         style={{
           background: `
             radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),

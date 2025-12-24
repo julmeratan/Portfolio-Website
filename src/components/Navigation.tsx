@@ -47,13 +47,13 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/90 backdrop-blur-lg py-3"
           : "bg-transparent py-4"
       }`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="font-display text-xl font-bold text-primary">
           JR
