@@ -73,7 +73,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.6s" }}
           >
             <a
-              href="https://github.com/ratanjulme"
+              href="https://github.com/julmeratan"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float"
@@ -89,7 +89,7 @@ const HeroSection = () => {
               <Linkedin size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="mailto:ratanjulme20@gmail.com"
+              href="mailto:julmeratan@gmail.com"
               className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float water-float-delay-2"
             >
               <Mail size={20} className="group-hover:scale-110 transition-transform" />
@@ -102,14 +102,14 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
+      </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
-            <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
-            <ArrowDown size={16} />
-          </a>
-        </div>
+      {/* Scroll Indicator - positioned outside main container, below icons */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+        <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-accent transition-colors">
+          <span className="font-body text-xs uppercase tracking-widest">Scroll</span>
+          <ArrowDown size={16} />
+        </a>
       </div>
     </section>
   );

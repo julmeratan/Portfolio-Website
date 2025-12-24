@@ -1,10 +1,10 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:john@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/julmeratan", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ratanjulme/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:julmeratan@gmail.com", label: "Email" },
+  { icon: Phone, href: "tel:+919014434351", label: "Phone" },
 ];
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo */}
             <a href="#" className="font-display text-2xl font-bold text-background">
-              JD<span className="text-accent">.</span>
+              JR<span className="text-accent">.</span>
             </a>
 
             {/* Social Links */}
@@ -36,7 +36,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <p className="font-body text-sm text-background/60">
-              © {new Date().getFullYear()} John Doe. All rights reserved.
+              © {new Date().getFullYear()} Julme Ratan. All rights reserved.
             </p>
           </div>
         </div>
