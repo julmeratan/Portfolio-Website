@@ -8,8 +8,17 @@ const skills = [
   "Excel & DAX",
   "HTML & CSS",
   "Web Development",
+];
+
+const softSkills = [
+  "Leadership Skills",
   "Problem Solving",
   "Critical Thinking",
+  "Communication",
+  "Teamwork",
+  "Time Management",
+  "Adaptability",
+  "Continuous Learning",
 ];
 
 const AboutSection = () => {
@@ -39,7 +48,7 @@ const AboutSection = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="mb-16">
+          <div className="mb-10">
             <h3 className="font-display text-xl font-semibold text-foreground mb-6 text-center">
               Skills & Expertise
             </h3>
@@ -48,6 +57,23 @@ const AboutSection = () => {
                 <span
                   key={skill}
                   className="px-4 py-2 rounded-full bg-card border border-border text-sm font-body text-foreground hover:border-primary hover:text-primary transition-colors"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Soft Skills */}
+          <div className="mb-16">
+            <h3 className="font-display text-xl font-semibold text-foreground mb-6 text-center">
+              Soft Skills
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {softSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 rounded-full bg-card border border-accent/50 text-sm font-body text-foreground hover:border-accent hover:text-accent transition-colors"
                 >
                   {skill}
                 </span>
