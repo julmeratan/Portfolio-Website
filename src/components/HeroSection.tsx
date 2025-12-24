@@ -81,7 +81,7 @@ const HeroSection = () => {
               <Github size={20} className="group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://linkedin.com/in/ratanjulme"
+              href="https://www.linkedin.com/in/ratanjulme/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 group hover-lift water-float water-float-delay-1"
