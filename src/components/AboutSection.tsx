@@ -6,7 +6,10 @@ const skills = [
   "AWS Cloud",
   "Machine Learning",
   "Excel & DAX",
+  "HTML & CSS",
+  "Web Development",
   "Problem Solving",
+  "Critical Thinking",
 ];
 
 const AboutSection = () => {
@@ -19,7 +22,7 @@ const AboutSection = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               About Me
             </h2>
-            <div className="font-body text-muted-foreground max-w-3xl mx-auto space-y-4 text-left">
+            <div className="font-body text-foreground font-medium max-w-3xl mx-auto space-y-4 text-left">
               <p>
                 I am a Computer Science undergraduate specializing in Artificial Intelligence and Data Analytics, with a strong interest in solving real-world problems through technology.
               </p>
