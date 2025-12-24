@@ -6,112 +6,78 @@
 
 @layer base {
   :root {
-    /* New crystal palette: #C4737C, #E1D3CA, #F3EEE9, #DFA0F3 */
-    --background: 35 30% 94%; /* #F3EEE9 */
-    --foreground: 0 0% 10%; /* High contrast dark text */
+    /* Dark professional theme with cyan/magenta accents */
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 25 25% 90%; /* #E1D3CA */
-    --card-foreground: 0 0% 10%; /* High contrast dark text */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 25 25% 90%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 352 32% 45%; /* Darker rose for better contrast */
-    --primary-foreground: 0 0% 100%;
+    --primary: 180 100% 50%; /* Cyan */
+    --primary-foreground: 240 10% 4%;
 
-    --secondary: 25 25% 85%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 35 20% 88%;
-    --muted-foreground: 0 0% 30%; /* Darker for better readability */
+    --muted: 240 10% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 290 70% 55%; /* Darker orchid for contrast */
+    --accent: 320 100% 60%; /* Magenta/Pink */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 25 20% 80%;
-    --input: 25 20% 80%;
-    --ring: 290 70% 55%;
-
-    /* Water colors for effects only */
-    --water-rose: 352 32% 61%; /* #C4737C */
-    --water-cream: 25 25% 85%; /* #E1D3CA */
-    --water-ivory: 35 30% 94%; /* #F3EEE9 */
-    --water-orchid: 290 80% 79%; /* #DFA0F3 */
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 180 100% 50%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(35 30% 94%) 0%, hsl(25 25% 90%) 50%, hsl(35 30% 94%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(25 25% 90% / 0.9) 0%, hsl(35 30% 94% / 0.8) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(352 32% 50%) 0%, hsl(290 70% 55%) 100%);
-    --gradient-water: linear-gradient(180deg, hsl(35 30% 94% / 0.95) 0%, hsl(25 25% 90% / 0.9) 50%, hsl(290 80% 79% / 0.3) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(240 10% 6%) 50%, hsl(240 10% 4%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(240 10% 8% / 0.95) 0%, hsl(240 10% 6% / 0.9) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(320 100% 60%) 100%);
     
-    --shadow-soft: 0 4px 20px -4px hsl(352 32% 61% / 0.15);
-    --shadow-medium: 0 8px 30px -6px hsl(352 32% 61% / 0.2);
-    --shadow-accent: 0 8px 24px -4px hsl(290 80% 79% / 0.4);
-    --shadow-water: 0 10px 40px -8px hsl(290 80% 79% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(180 100% 50% / 0.15);
+    --shadow-medium: 0 8px 30px -6px hsl(180 100% 50% / 0.2);
+    --shadow-accent: 0 0 30px hsl(180 100% 50% / 0.3);
 
     --font-display: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    --sidebar-background: 35 30% 94%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 352 32% 45%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 290 70% 55%;
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 320 100% 60%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 25 20% 80%;
-    --sidebar-ring: 290 70% 55%;
+    --sidebar-border: 240 10% 15%;
+    --sidebar-ring: 180 100% 50%;
   }
 
   .dark {
-    --background: 290 20% 8%;
-    --foreground: 0 0% 95%; /* High contrast light text */
-
-    --card: 290 18% 12%;
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+    --card: 240 10% 8%;
     --card-foreground: 0 0% 95%;
-
-    --popover: 290 18% 12%;
+    --popover: 240 10% 8%;
     --popover-foreground: 0 0% 95%;
-
-    --primary: 352 40% 70%;
-    --primary-foreground: 0 0% 10%;
-
-    --secondary: 290 15% 16%;
-    --secondary-foreground: 0 0% 90%;
-
-    --muted: 290 12% 18%;
-    --muted-foreground: 0 0% 70%; /* Lighter for dark mode readability */
-
-    --accent: 290 80% 75%;
-    --accent-foreground: 0 0% 10%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 290 15% 18%;
-    --input: 290 15% 18%;
-    --ring: 290 80% 75%;
-
-    --water-rose: 352 32% 65%;
-    --water-cream: 25 20% 25%;
-    --water-ivory: 35 25% 15%;
-    --water-orchid: 290 80% 75%;
-
-    --gradient-hero: linear-gradient(135deg, hsl(290 20% 8%) 0%, hsl(290 18% 10%) 50%, hsl(290 20% 8%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(290 18% 12%) 0%, hsl(290 16% 10%) 100%);
-    --gradient-water: linear-gradient(180deg, hsl(290 20% 8% / 0.95) 0%, hsl(290 18% 12% / 0.9) 50%, hsl(352 32% 65% / 0.2) 100%);
-
-    --sidebar-background: 290 20% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 352 40% 70%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 290 80% 75%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 290 15% 18%;
-    --sidebar-ring: 290 80% 75%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 240 10% 4%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 320 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 180 100% 50%;
   }
 }
 
@@ -177,95 +143,6 @@
     animation: fadeIn 0.5s ease-out forwards;
   }
 
-  .animate-slide-in {
-    animation: slideIn 0.5s ease-out forwards;
-  }
-
-  .ripple-effect {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid hsl(290, 80%, 79%);
-    background: radial-gradient(circle, hsl(290, 80%, 79%, 0.3) 0%, transparent 70%);
-    animation: ripple 1.2s ease-out forwards;
-    opacity: 0;
-  }
-
-  @keyframes ripple {
-    0% {
-      width: 20px;
-      height: 20px;
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(0);
-      border-color: hsl(352, 32%, 61%);
-    }
-    50% {
-      border-color: hsl(290, 80%, 79%);
-    }
-    100% {
-      width: 350px;
-      height: 350px;
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(1);
-      border-color: hsl(290, 80%, 79%);
-    }
-  }
-
-  /* Water floating effect for icons */
-  .water-float {
-    animation: waterFloat 3s ease-in-out infinite;
-    filter: drop-shadow(0 8px 16px hsl(290, 80%, 79%, 0.4));
-  }
-
-  .water-float-delay-1 {
-    animation-delay: 0.5s;
-  }
-
-  .water-float-delay-2 {
-    animation-delay: 1s;
-  }
-
-  .water-float-delay-3 {
-    animation-delay: 1.5s;
-  }
-
-  @keyframes waterFloat {
-    0%, 100% {
-      filter: drop-shadow(0 8px 16px hsl(290, 80%, 79%, 0.4));
-    }
-    50% {
-      filter: drop-shadow(0 12px 20px hsl(290, 80%, 79%, 0.6));
-    }
-  }
-
-  /* Water bubble effect */
-  .water-bubble {
-    position: relative;
-    overflow: visible;
-  }
-
-  .water-bubble::before {
-    content: '';
-    position: absolute;
-    inset: -4px;
-    border-radius: inherit;
-    background: linear-gradient(135deg, hsl(290, 80%, 79%, 0.3) 0%, hsl(352, 32%, 61%, 0.2) 50%, transparent 100%);
-    animation: bubbleShimmer 4s ease-in-out infinite;
-    z-index: -1;
-  }
-
-  @keyframes bubbleShimmer {
-    0%, 100% {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
-  }
-
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -286,21 +163,10 @@
     }
   }
 
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
   .glass-card {
-    background: hsla(var(--card), 0.8);
+    background: hsl(240 10% 8% / 0.8);
     backdrop-filter: blur(20px);
-    border: 1px solid hsla(var(--border), 0.3);
+    border: 1px solid hsl(240 10% 20% / 0.5);
   }
 
   .hover-lift {
@@ -308,58 +174,29 @@
   }
 
   .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px -12px hsla(290, 80%, 79%, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -8px hsl(180 100% 50% / 0.2);
   }
 
   .glow-text {
-    text-shadow: 0 0 40px hsla(290, 80%, 79%, 0.6), 0 0 80px hsla(352, 32%, 61%, 0.3);
+    text-shadow: 0 0 30px hsl(180 100% 50% / 0.5), 0 0 60px hsl(320 100% 60% / 0.3);
   }
 
-  .holographic {
-    background: linear-gradient(
-      135deg,
-      hsla(352, 32%, 61%, 0.15) 0%,
-      hsla(290, 80%, 79%, 0.15) 25%,
-      hsla(25, 25%, 85%, 0.1) 50%,
-      hsla(290, 80%, 79%, 0.15) 75%,
-      hsla(352, 32%, 61%, 0.15) 100%
-    );
-    background-size: 400% 400%;
-    animation: holographicShift 8s ease infinite;
+  /* Profile glow ring */
+  .profile-glow {
+    box-shadow: 0 0 0 4px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
   }
 
-  @keyframes holographicShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  /* Network node animation */
+  .network-node {
+    animation: pulse-node 3s ease-in-out infinite;
   }
 
-  /* Water wave background */
-  .water-wave-bg {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .water-wave-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(ellipse 100% 50% at 50% 100%, hsl(290, 80%, 79%, 0.15) 0%, transparent 60%),
-      radial-gradient(ellipse 80% 40% at 20% 80%, hsl(352, 32%, 61%, 0.1) 0%, transparent 50%),
-      radial-gradient(ellipse 60% 30% at 80% 90%, hsl(290, 80%, 79%, 0.12) 0%, transparent 50%);
-    animation: waveFlow 6s ease-in-out infinite;
-    z-index: 0;
-  }
-
-  @keyframes waveFlow {
+  @keyframes pulse-node {
     0%, 100% {
-      transform: translateY(0) scaleY(1);
-      opacity: 0.8;
+      opacity: 0.6;
     }
     50% {
-      transform: translateY(-10px) scaleY(1.1);
       opacity: 1;
     }
   }
