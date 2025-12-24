@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -26,16 +27,23 @@ const Navigation = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg shadow-soft py-4"
-          : "bg-transparent py-6"
+          ? "bg-background/80 backdrop-blur-lg shadow-soft py-3"
+          : "bg-transparent py-4"
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="font-display text-2xl font-bold text-foreground hover:text-accent transition-colors"
+          className="flex items-center gap-3 group"
         >
-          JD<span className="text-accent">.</span>
+          <img 
+            src={profilePhoto} 
+            alt="Julme Ratan" 
+            className="w-10 h-10 rounded-full object-cover border-2 border-accent/50 group-hover:border-accent transition-colors"
+          />
+          <span className="font-display text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+            JR<span className="text-accent">.</span>
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -53,9 +61,12 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <Button variant="accent" size="sm" className="hidden md:flex">
-          Download CV
-        </Button>
+        <a href="/Julme_Ratan_Resume.pdf" download>
+          <Button variant="accent" size="sm" className="hidden md:flex gap-2">
+            <Download size={16} />
+            Download Resume
+          </Button>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -82,9 +93,12 @@ const Navigation = () => {
               </li>
             ))}
             <li className="pt-4">
-              <Button variant="accent" className="w-full">
-                Download CV
-              </Button>
+              <a href="/Julme_Ratan_Resume.pdf" download className="block">
+                <Button variant="accent" className="w-full gap-2">
+                  <Download size={16} />
+                  Download Resume
+                </Button>
+              </a>
             </li>
           </ul>
         </div>
