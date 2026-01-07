@@ -17,8 +17,8 @@ const projects = [
   },
   {
     title: "CampusPulse",
-    description: "Developed CampusPulse, a full-stack event platform implementing event features such as creating, viewing, and participating in events, with authentication.",
-    tags: ["Node.js", "Express.js", "MongoDB", "JavaScript"],
+    description: "Developed a full-stack event platform implementing event features such as creating, viewing, and participating in events, with authentication.",
+    tags: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB"],
     liveLink: "https://www.campuspulse.life/",
     codeLink: null,
   },
