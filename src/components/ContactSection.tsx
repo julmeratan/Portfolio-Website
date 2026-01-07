@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone, Send, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Github, Download, Sparkles, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -39,20 +36,14 @@ const contactInfo = [
 ];
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+  const handleHireMe = () => {
+    const subject = encodeURIComponent("Job Opportunity - Let's Connect!");
+    const body = encodeURIComponent(
+      `Hi Julme,\n\nI came across your portfolio and I'm impressed with your skills in Data Analytics, AI/ML, and Full-Stack Development.\n\nI'd love to discuss a potential opportunity with you.\n\nBest regards,`
+    );
+    window.open(`mailto:julmeratan@gmail.com?subject=${subject}&body=${body}`, "_blank");
   };
 
   return (
@@ -62,7 +53,7 @@ const ContactSection = () => {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Get in Touch
+              Let's Work Together
             </h2>
             <p className="font-body text-muted-foreground max-w-xl mx-auto">
               I'm currently looking for opportunities in Data Analytics, AI/ML, and Cloud Computing.
@@ -103,56 +94,74 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="glass-card rounded-xl p-6">
-              <div className="space-y-4">
-                <div>
-                  <label className="font-body text-sm text-foreground mb-2 block">
-                    Your Name
-                  </label>
-                  <Input
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                    className="bg-background border-border focus:border-primary"
-                  />
+            {/* Interactive CTA Section */}
+            <div className="glass-card rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-6">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full animate-pulse" />
+                <div className="relative p-6 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30">
+                  <Sparkles className="w-12 h-12 text-primary animate-pulse" />
                 </div>
-                <div>
-                  <label className="font-body text-sm text-foreground mb-2 block">
-                    Your Email
-                  </label>
-                  <Input
-                    type="email"
-                    placeholder="your@email.com"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                    className="bg-background border-border focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label className="font-body text-sm text-foreground mb-2 block">
-                    Your Message
-                  </label>
-                  <Textarea
-                    placeholder="Tell me about your opportunity..."
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    className="bg-background border-border focus:border-primary resize-none"
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
-                >
-                  Send Message
-                  <Send size={16} />
-                </Button>
               </div>
-            </form>
+              
+              <div className="space-y-2">
+                <h3 className="font-display text-2xl font-bold text-foreground">
+                  Ready to Contribute!
+                </h3>
+                <p className="font-body text-muted-foreground text-sm max-w-xs">
+                  Fresh graduate with hands-on experience in Power BI, Python, Full-Stack Development, and Cloud Technologies.
+                </p>
+              </div>
+
+              {/* Animated Hire Button */}
+              <Button
+                onClick={handleHireMe}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-6 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Hire Me
+                  <ArrowRight 
+                    className={`w-5 h-5 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} 
+                  />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Button>
+
+              {/* Quick Actions */}
+              <div className="flex gap-3 pt-2">
+                <a
+                  href="/Julme_Ratan_Resume.pdf"
+                  download
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary/50 hover:bg-secondary text-foreground text-sm font-medium transition-colors"
+                >
+                  <Download size={16} />
+                  Resume
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/ratanjulme/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary/50 hover:bg-secondary text-foreground text-sm font-medium transition-colors"
+                >
+                  <Linkedin size={16} />
+                  Connect
+                </a>
+                <a
+                  href="https://github.com/julmeratan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary/50 hover:bg-secondary text-foreground text-sm font-medium transition-colors"
+                >
+                  <Github size={16} />
+                  Code
+                </a>
+              </div>
+
+              <p className="font-body text-xs text-muted-foreground italic">
+                "Eager to learn, ready to grow, committed to excellence"
+              </p>
+            </div>
           </div>
         </div>
       </div>
