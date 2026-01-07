@@ -6,7 +6,7 @@ const projects = [
     description: "Developed a Power BI dashboard analyzing $12.64M in sales and $1.47M in profit. Boosted data visibility by 65%.",
     tags: ["Power BI", "DAX", "Data Modeling"],
     liveLink: null,
-    codeLink: "https://github.com/julmeratan",
+    codeLink: "https://github.com/users/julmeratan/projects/4?pane=issue&itemId=79801456&issue=julmeratan%7Cgriet-event-uni%7C2",
   },
   {
     title: "ISRO Space Missions Dashboard",
