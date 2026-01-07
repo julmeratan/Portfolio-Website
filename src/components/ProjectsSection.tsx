@@ -16,11 +16,11 @@ const projects = [
     codeLink: "https://github.com/julmeratan",
   },
   {
-    title: "Hyperledger Blockchain Development",
-    description: "Worked on blockchain technology and smart contracts during internship at IDS Pvt. Ltd.",
-    tags: ["Hyperledger", "Smart Contracts", "Blockchain"],
-    liveLink: null,
-    codeLink: "https://github.com/julmeratan",
+    title: "CampusPulse",
+    description: "Developed CampusPulse, a full-stack event platform implementing event features such as creating, viewing, and participating in events, with authentication.",
+    tags: ["Node.js", "Express.js", "MongoDB", "JavaScript"],
+    liveLink: "https://www.campuspulse.life/",
+    codeLink: null,
   },
   {
     title: "AWS Cloud Projects",
