@@ -54,14 +54,14 @@ const Navigation = () => {
       }`}
       style={{ right: 0 }}
     >
-      <nav className="w-full px-6 md:px-12 flex items-center justify-between">
+      <nav className="w-full px-4 sm:px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-display text-xl font-bold text-primary">
+        <a href="#" className="font-display text-lg sm:text-xl font-bold text-primary">
           JR
         </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-4 lg:gap-8">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a

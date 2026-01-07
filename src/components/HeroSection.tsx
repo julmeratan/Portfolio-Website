@@ -5,18 +5,18 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-8 sm:pb-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Photo */}
           <div 
-            className="mb-8 animate-fade-up"
+            className="mb-6 sm:mb-8 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
             <div className="relative inline-block">
               <img 
                 src={profilePhoto} 
                 alt="Julme Ratan" 
-                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover profile-glow"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover profile-glow"
               />
               <div className="absolute inset-0 rounded-full border-2 border-primary/50 animate-pulse" />
             </div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
           {/* Name with gradient */}
           <h1 
-            className="font-display text-5xl md:text-7xl font-bold mb-4 animate-fade-up"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4 animate-fade-up"
             style={{ animationDelay: "0.2s" }}
           >
             <span className="text-gradient glow-text">Julme Ratan</span>
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p 
-            className="font-body text-lg md:text-xl text-muted-foreground mb-2 animate-fade-up"
+            className="font-body text-base sm:text-lg md:text-xl text-muted-foreground mb-2 animate-fade-up px-2"
             style={{ animationDelay: "0.3s" }}
           >
             B.Tech AI & ML | Data Analyst & Developer
@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           {/* Location */}
           <p 
-            className="font-body text-sm text-muted-foreground mb-8 animate-fade-up"
+            className="font-body text-xs sm:text-sm text-muted-foreground mb-6 sm:mb-8 animate-fade-up"
             style={{ animationDelay: "0.4s" }}
           >
             Hyderabad, India
@@ -55,7 +55,7 @@ const HeroSection = () => {
               variant="default" 
               size="lg" 
               asChild 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 text-sm sm:text-base w-full sm:w-auto"
             >
               <a href="#projects">View Projects</a>
             </Button>
@@ -63,7 +63,7 @@ const HeroSection = () => {
               variant="outline" 
               size="lg" 
               asChild 
-              className="border-primary text-primary hover:bg-primary/10 px-8 gap-2"
+              className="border-primary text-primary hover:bg-primary/10 px-6 sm:px-8 gap-2 text-sm sm:text-base w-full sm:w-auto"
             >
               <a href="/Julme_Ratan_Resume.pdf" download>
                 <Download size={18} />
