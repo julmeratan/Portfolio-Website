@@ -75,7 +75,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-up" style={{ animationDelay: "0.7s" }}>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-fade-up" style={{ animationDelay: "0.7s" }}>
         <a href="#about" className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
           <ArrowDown size={20} className="animate-bounce" />
         </a>
