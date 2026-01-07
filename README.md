@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# HireMee – Personal Portfolio Website
 
-## Project info
+HireMee is my personal portfolio website created to present my professional profile, resume, skills, and projects in a clear and structured manner. The website serves as a single platform for recruiters and hiring managers to quickly understand my background, technical expertise, and practical experience.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🔗 **Live Website:** https://hiremee.lovable.app/
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🎯 Purpose
 
-**Use Lovable**
+The goal of this portfolio is to:
+- Showcase my **resume and professional background**
+- Highlight **technical skills and project experience**
+- Provide quick access to **contact and professional links**
+- Create a strong and clean first impression for hiring teams
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧩 Features
 
-**Use your preferred IDE**
+- Clean and minimal user interface
+- Dedicated **Resume section** with downloadable PDF
+- Well-structured **Skills section**
+- Project highlights with brief descriptions
+- Responsive design for all screen sizes
+- Simple navigation optimized for recruiters
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠 Tech Stack
 
-Follow these steps:
+- HTML  
+- CSS  
+- JavaScript  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📄 Resume
 
-# Step 3: Install the necessary dependencies.
-npm i
+A downloadable resume is included on the website, covering:
+- Education and certifications
+- Internships and hands-on experience
+- Technical and analytical skills
+- Academic and practical projects
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 👤 About Me
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+I am a B.Tech student specializing in Artificial Intelligence and Machine Learning, with a strong interest in data analytics, software development, and problem-solving. I focus on building practical solutions and presenting my work in a professional and organized manner.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📫 Contact
 
-## What technologies are used for this project?
+- **Email:** julmeratan@gmail.com  
+- **LinkedIn:** https://linkedin.com/in/ratanjulme/
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 💼 For Recruiters
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This portfolio is designed for quick evaluation, with all essential information — resume, skills, and projects — accessible within a few clicks.
