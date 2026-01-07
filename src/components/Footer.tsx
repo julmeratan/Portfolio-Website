@@ -9,7 +9,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="py-4 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Logo */}
