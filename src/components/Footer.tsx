@@ -9,32 +9,32 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="py-2 border-t border-border">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="py-3 sm:py-4 border-t border-border">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           {/* Logo */}
-          <a href="#" className="font-display text-lg font-bold text-primary">
+          <a href="#" className="font-display text-base sm:text-lg font-bold text-primary">
             Julme Ratan
           </a>
 
           {/* Social Links */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full bg-card text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                className="p-1.5 sm:p-2 rounded-full bg-card text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
                 aria-label={social.label}
               >
-                <social.icon size={18} />
+                <social.icon size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
             ))}
           </div>
 
           {/* Copyright */}
-          <p className="font-body text-xs text-muted-foreground">
+          <p className="font-body text-xs text-muted-foreground text-center">
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>

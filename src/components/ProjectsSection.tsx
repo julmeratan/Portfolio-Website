@@ -39,21 +39,21 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
       href={projectLink || "#"}
       target="_blank"
       rel="noopener noreferrer"
-      className="glass-card rounded-xl p-6 hover-lift group block cursor-pointer"
+      className="glass-card rounded-xl p-4 sm:p-6 hover-lift group block cursor-pointer"
     >
-      <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+      <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 group-hover:text-primary transition-colors">
         {project.title}
       </h3>
-      <p className="font-body text-muted-foreground text-sm mb-4 line-clamp-2">
+      <p className="font-body text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">
         {project.description}
       </p>
       
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 text-xs font-body rounded-full bg-primary/10 text-primary"
+            className="px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-body rounded-full bg-primary/10 text-primary"
           >
             {tag}
           </span>
@@ -81,21 +81,21 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-16 relative">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-12 sm:py-16 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               My Projects
             </h2>
-            <p className="font-body text-muted-foreground">
+            <p className="font-body text-muted-foreground text-sm sm:text-base px-2">
               Explore my collection of data analytics and development projects
             </p>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
