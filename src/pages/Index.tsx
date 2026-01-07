@@ -9,7 +9,7 @@ import CursorGlow from "@/components/CursorGlow";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="bg-background relative">
       <InteractiveBackground />
       <CursorGlow />
       <Navigation />
