@@ -31,54 +31,53 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project }: { project: typeof projects[0] }) => (
-  <div className="glass-card rounded-xl p-6 hover-lift group">
-    <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-      {project.title}
-    </h3>
-    <p className="font-body text-muted-foreground text-sm mb-4 line-clamp-2">
-      {project.description}
-    </p>
-    
-    {/* Tags */}
-    <div className="flex flex-wrap gap-2 mb-4">
-      {project.tags.map((tag) => (
-        <span
-          key={tag}
-          className="px-3 py-1 text-xs font-body rounded-full bg-primary/10 text-primary"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
+const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
+  const projectLink = project.liveLink || project.codeLink;
+  
+  return (
+    <a
+      href={projectLink || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="glass-card rounded-xl p-6 hover-lift group block cursor-pointer"
+    >
+      <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+        {project.title}
+      </h3>
+      <p className="font-body text-muted-foreground text-sm mb-4 line-clamp-2">
+        {project.description}
+      </p>
+      
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="px-3 py-1 text-xs font-body rounded-full bg-primary/10 text-primary"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-    {/* Links */}
-    <div className="flex items-center gap-4">
-      {project.liveLink && (
-        <a
-          href={project.liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm text-primary hover:text-primary/80 transition-colors"
-        >
-          <ExternalLink size={14} />
-          Live
-        </a>
-      )}
-      {project.codeLink && (
-        <a
-          href={project.codeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <Github size={14} />
-          Code
-        </a>
-      )}
-    </div>
-  </div>
-);
+      {/* Links indicator */}
+      <div className="flex items-center gap-4">
+        {project.liveLink && (
+          <span className="flex items-center gap-1 text-sm text-primary">
+            <ExternalLink size={14} />
+            Live
+          </span>
+        )}
+        {project.codeLink && (
+          <span className="flex items-center gap-1 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+            <Github size={14} />
+            View Project
+          </span>
+        )}
+      </div>
+    </a>
+  );
+};
 
 const ProjectsSection = () => {
   return (
