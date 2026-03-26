@@ -23,7 +23,7 @@ const softSkills = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 sm:py-16 relative">
+    <section id="about" className="py-8 sm:py-12 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -65,7 +65,7 @@ const AboutSection = () => {
           </div>
 
           {/* Soft Skills */}
-          <div className="mb-8 sm:mb-12">
+          <div className="mb-2 sm:mb-4">
             <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6 text-center">
               Soft Skills
             </h3>
