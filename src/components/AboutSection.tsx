@@ -65,7 +65,7 @@ const AboutSection = () => {
           </div>
 
           {/* Soft Skills */}
-          <div className="mb-8 sm:mb-12">
+          <div className="mb-2 sm:mb-4">
             <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6 text-center">
               Soft Skills
             </h3>
