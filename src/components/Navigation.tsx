@@ -6,6 +6,7 @@ const navLinks = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
+  { name: "Internship", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Resume", href: "/Julme_Ratan_Resume.pdf" },
   { name: "Contact", href: "#contact" },
