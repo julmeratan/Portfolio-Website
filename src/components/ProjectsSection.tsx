@@ -2,6 +2,13 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "TaskFlow - Premium Team Task Manager",
+    description: "A production-ready team management system uniquely branded for Ethara.ai. Features AI-driven insights, multi-criteria sorting, and secure role-based access control.",
+    tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "Ethara AI"],
+    liveLink: "https://team-task-manager-production-6d56.up.railway.app",
+    codeLink: "https://github.com/julmeratan/team-task-manager",
+  },
+  {
     title: "Walmart E-Commerce Sales Report",
     description: "Developed a Power BI dashboard analyzing $12.64M in sales and $1.47M in profit. Boosted data visibility by 65%.",
     tags: ["Power BI", "DAX", "Data Modeling"],
