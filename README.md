@@ -1,8 +1,6 @@
-# HireMee – Personal Portfolio Website
+# Julme Ratan – Personal Portfolio Website
 
-HireMee is my personal portfolio website created to present my professional profile, resume, skills, and projects in a clear and structured manner. The website serves as a single platform for recruiters and hiring managers to quickly understand my background, technical expertise, and practical experience.
-
-🔗 **Live Website:** https://hiremee.lovable.app/
+A professional portfolio website designed to showcase my profile, resume, technical skills, and projects.
 
 ---
 
