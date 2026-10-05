@@ -19,10 +19,10 @@ const EducationSection = () => {
                     <h4 className="font-display text-base sm:text-lg font-semibold text-foreground">
                       B.Tech in AI & ML
                     </h4>
-                    <span className="text-primary text-xs sm:text-sm font-body">Expected 2026</span>
+                    <span className="text-primary text-xs sm:text-sm font-body">Graduated</span>
                   </div>
                   <p className="font-body text-muted-foreground text-xs sm:text-sm">GRIET, Hyderabad</p>
-                  <p className="font-body text-muted-foreground text-xs mt-1">Currently Pursuing</p>
+                  <p className="font-body text-muted-foreground text-xs mt-1">Completed</p>
                 </div>
               </div>
             </div>

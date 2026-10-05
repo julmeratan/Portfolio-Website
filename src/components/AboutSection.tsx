@@ -33,7 +33,7 @@ const AboutSection = () => {
             </h2>
             <div className="font-body text-foreground font-medium max-w-3xl mx-auto space-y-3 sm:space-y-4 text-left text-sm sm:text-base">
               <p>
-                I am a Computer Science undergraduate specializing in Artificial Intelligence and Data Analytics, with a strong interest in solving real-world problems through technology.
+                I am a Computer Science graduate specializing in Artificial Intelligence and Data Analytics, with a strong interest in solving real-world problems through technology.
               </p>
               <p>
                 I have hands-on experience with Python, SQL, Power BI, Excel, HTML, CSS, C, and PowerPoint, working across data analysis, reporting, system understanding, and basic web development. I focus on building clear, structured, and practical solutions that deliver real value.
